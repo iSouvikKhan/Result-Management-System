@@ -1,0 +1,48 @@
+
+<% layout('layouts/boilerplate') %>
+
+<div class="position">
+      <!-- Header -->
+      <nav class="navbar-expand header p-1">
+        <header><h2>Result Management System</h2></header>
+      </nav>
+
+      <!-- Main -->
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 height">
+              
+              <div class="container h-75 d-flex justify-content-center align-items-center">
+                <div class="row ">
+                  <div class="col-4 dimension">
+                    <h5 class="text-center">Login as</h5>
+                    <br/>
+                    <div class="row offset-1">
+                      <div class="col-5">
+                        <a href="/students" type="button" class="btn btn-primary radius click">Teacher</a>
+                      </div>
+                      <div class="col-5">
+                        <a href="/student" type="button" class="btn btn-primary radius click">Student</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <div class="row">
+        <footer class="footer fixed-bottom p-1 Copyright">Copyright &copy; Result Management System <span id="currentYear"></span></footer>
+      </div>
+    </div>
+
+    <script>
+      var date = new Date();
+      var year = date.getFullYear();
+      document.getElementById("currentYear").innerHTML = year;
+    </script>

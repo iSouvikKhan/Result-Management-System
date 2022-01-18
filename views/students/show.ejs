@@ -1,0 +1,79 @@
+
+<% layout('layouts/boilerplate') %>
+
+<div>
+        <!-- Header -->
+        <nav class="navbar-expand header p-1">
+            <a href="/home" type="button" class="btn colour radius float-end"><strong>Logout</strong></a>
+          <header><h2>Result Management System</h2></header>
+        </nav>
+  
+        <!-- Main -->
+        <main>
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 height">
+                  <br/>
+                  <a href="/student">Back</a>
+                    <div class="row p-5">
+                        <div class="col-12">
+                            <br/>
+                            <h3 class="text-center">Result</h3>
+                            <br/>
+                            <div class="row offset-4">
+
+                                <div class="row py-2">
+                                    <div class="col-3 alignRight">
+                                        <label class="control-label"><strong>Roll No. : </strong></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <label><%= student.RollNumber%></label>
+                                    </div>
+                                </div>
+
+                                <div class="row py-2">
+                                    <div class="col-3 alignRight">
+                                        <label class="control-label"><strong>Name : </strong></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <label><%= student.Name%></label>
+                                    </div>
+                                </div>
+
+                                <div class="row py-2">
+                                    <div class="col-3 alignRight">
+                                        <label class="control-label"><strong>Date Of Birth : </strong></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <label><%= student.Dob%></label>
+                                    </div>
+                                </div>
+
+                                <div class="row py-2">
+                                    <div class="col-3 alignRight">
+                                        <label class="control-label"><strong>Score : </strong></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <label><%= student.Score%></label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="row">
+            <footer class="footer fixed-bottom p-1 Copyright">Copyright &copy; Result Management System <span id="currentYear"></span></footer>        </div>
+        </div>
+
+    <script>
+        var date = new Date();
+        var year = date.getFullYear();
+        document.getElementById("currentYear").innerHTML = year;
+    </script>

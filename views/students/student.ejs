@@ -1,0 +1,78 @@
+
+<% layout('layouts/boilerplate') %>
+
+<div>
+        <!-- Header -->
+        <nav class="navbar-expand header p-1">
+            <a href="/home" type="button" class="btn colour radius float-end"><strong>Logout</strong></a>
+          <header><h2>Result Management System</h2></header>
+        </nav>
+  
+        <!-- Main -->
+        <main>
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 height">
+                  <br/>
+                    <div class="row offset-1">
+                        <div class="col-8">
+                            <br/>
+                            <h4>Find Result</h4>
+                            <br/>
+                            <form id="myform" action="/student" method="POST">
+                                <div class="row g-3 align-items-center">
+
+                                    <div class="row py-2">
+                                        <div class="col-3">
+                                            <label for="rollNumber" class="control-label">Roll No.</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" placeholder="Enter Student's Roll Number" id="rollNumber" class="form-control" name="student[RollNumber]" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row py-2">
+                                        <div class="col-3">
+                                            <label for="name" class="control-label">Name</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" id="Name" placeholder="Enter Student's Full Name" class="form-control" name="student[Name]" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row py-5">
+                                        <div class="col-6 form-check">
+                                          <button class="btn btn-primary size radius click">Search</button>
+                                        </div>
+                                        <div class="col-2 form-check">
+                                          <button type="button" class="btn btn-outline-primary size radius" onclick="resetform()" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to clear the form">Clear</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="row">
+            <footer class="footer fixed-bottom p-1 Copyright">Copyright &copy; Result Management System <span id="currentYear"></span></footer>
+        </div>
+    </div>
+
+    <script>
+        function resetform()
+        {
+            document.getElementById("myform").reset();
+        }
+
+        var date = new Date();
+        var year = date.getFullYear();
+        document.getElementById("currentYear").innerHTML = year;
+
+    </script>
